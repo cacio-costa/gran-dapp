@@ -11,14 +11,22 @@
     <%- include('../includes/barra-superior.html'); %>
     
     <div class="container mt-4">
-        <h3 class="border-bottom border-dark mb-4">Eleitor - Liberar Votação</h3>
+        <div class="row">
+            <div class="col">
+                <h3 class="border-bottom border-dark mb-4">Eleitor - Liberar Votação</h3>
+            </div>
+        </div>
 
-        <div class="alert alert-success d-none" id="mensagem">
-            <strong>Código gerado para o eleitor!</strong> Informe o código para realizar a votação: <i id="codigo"></i>
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-success d-none" id="mensagem">
+                    <strong>Código gerado para o eleitor!</strong> Informe o código para realizar a votação: <i id="codigo"></i>
+                </div>
+            </div>
         </div>
         
         <form action="/eleitor/liberar" method="post" id="formulario">
-            <div class="row">
+            <div class="row justify-content-center mb-3">
                 <div class="col-3">
                     <label for="titulo-eleitor" class="form-label">Título de eleitor</label>
                     <input type="number" class="form-control" id="titulo-eleitor">
