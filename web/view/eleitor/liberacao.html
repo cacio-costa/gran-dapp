@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <title>VotaGran</title>
+</head>
+<body>
+    <%- include('../includes/barra-superior.html'); %>
+    
+    <div class="container mt-4">
+        <h3 class="border-bottom border-dark mb-4">Eleitor - Liberar Votação</h3>
+
+        <div class="alert alert-success d-none" id="mensagem">
+            <strong>Código gerado para o eleitor!</strong> Informe o código para realizar a votação: <i id="codigo"></i>
+        </div>
+        
+        <form action="/eleitor/liberar" method="post" id="formulario">
+            <div class="row">
+                <div class="col-3">
+                    <label for="titulo-eleitor" class="form-label">Título de eleitor</label>
+                    <input type="number" class="form-control" id="titulo-eleitor">
+                </div>
+                <div class="col-3">
+                    <label for="senha" class="form-label">Senha para votação</label>
+                    <input type="password" class="form-control" id="senha">
+                </div>
+                <div class="col-3 align-self-end">
+                    <button id="botao-liberar" class="btn btn-primary">Liberar para votar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <%- include('../includes/scripts-comuns.html'); %>
+    <script src="/js/eleitor/liberacao.js"></script>
+</body>
+</html>

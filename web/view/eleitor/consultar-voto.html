@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <title>VotaGran</title>
+</head>
+<body>
+    <%- include('../includes/barra-superior.html'); %>
+    
+    <div class="container mt-4">
+        <h3 class="border-bottom border-dark mb-4">Eleitor - Consultar Voto</h3>
+        
+        <div class="row justify-content-center">
+            <div class="col-5">
+                <label for="numero-candidato" class="form-label">Código de votação</label>
+                <input type="text" class="form-control" id="endereco">
+            </div>
+            <div class="col-3">
+                <label for="numero-candidato" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha">
+            </div>
+            <div class="col-2 align-self-end">
+                <button id="botao-pesquisar" class="btn btn-primary">Pesquisar</button>
+            </div>
+        </div>
+        <div class="row mt-3 justify-content-center d-none" id="quadro-candidato">
+            <div class="col-4">
+                <h4>Voto registrado</h4>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150x100" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title text-center" id="identificacao-candidato"></h5>
+                        <h6 class="card-subtitle mb-5 text-muted text-center">CHAPA</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <%- include('../includes/scripts-comuns.html'); %>
+    <script src="/js/eleitor/consultar-voto.js"></script>
+</body>
+</html>

@@ -1,4 +1,5 @@
 blockchain/build/
+blockchain/package-lock.json
 
 web/node_modules/
 web/package-lock.json
