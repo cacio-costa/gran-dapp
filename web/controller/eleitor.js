@@ -1,8 +1,11 @@
-let { web3, smartContractEleicao } = require('../infraestrutura/Web3Config');
+const { web3, smartContractEleicao } = require('../infraestrutura/Web3Config');
 const config = require('../config');
 
 module.exports = function(app) {
 
+    /**
+     * Renderiza páginas para usuário.
+     */
     app.get('/eleitor/votar', (req, res) => res.render('eleitor/votar.html'));
     app.get('/eleitor/liberar-votacao', (req, res) => res.render('eleitor/liberacao.html'));
     app.get('/eleitor/consultar-voto', (req, res) => res.render('eleitor/consultar-voto.html'));

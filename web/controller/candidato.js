@@ -3,8 +3,14 @@ const config = require('../config');
 
 module.exports = function(app) {
 
+    /**
+     * Renderiza formulário para cadastrar novo candidato.
+     */
     app.get('/cadidato/formulario-cadastro', (req, res) => res.render('candidato/formulario-cadastro.html'));
 
+    /**
+     * Cadastra novo candidato.
+     */
     app.post('/api/candidato', async (req, res) => {
         let numero = req.body.numero;
         let nome = req.body.nome;
@@ -36,6 +42,9 @@ module.exports = function(app) {
         
     });
     
+    /**
+     * Consulta dados de um candidato pelo número de identificação.
+     */
     app.get('/api/candidato/:numero', async (req, res) => {
         let numero = req.params.numero;
         
