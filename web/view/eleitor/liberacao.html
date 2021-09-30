@@ -26,17 +26,19 @@
         </div>
         
         <form action="/eleitor/liberar" method="post" id="formulario">
-            <div class="row justify-content-center mb-3">
-                <div class="col-3">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-3 mb-3">
                     <label for="titulo-eleitor" class="form-label">Título de eleitor</label>
                     <input type="number" class="form-control" id="titulo-eleitor">
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-md-3 mb-3">
                     <label for="senha" class="form-label">Senha para votação</label>
                     <input type="password" class="form-control" id="senha">
                 </div>
-                <div class="col-3 align-self-end">
-                    <button id="botao-liberar" class="btn btn-primary">Liberar para votar</button>
+                <div class="col-12 col-md-3 align-self-end mt-5">
+                    <div class="d-grid">
+                        <button id="botao-liberar" class="btn btn-primary">Liberar para votar</button>
+                    </div>
                 </div>
             </div>
         </form>
