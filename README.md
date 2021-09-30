@@ -1,7 +1,7 @@
 # GranVote 
  - Aplicação de exemplo para interagir com contratos inteligente numa rede Ethereum.
 
-### Dependências necessárias
+## Dependências necessárias
 
 Os softwares necessários para rodar o app são:
 
@@ -10,15 +10,15 @@ Os softwares necessários para rodar o app são:
 - [Docker](https://www.docker.com/products/docker-desktop)
 
 
-### Instruções
+## Instruções
 
-#### Instalação do Truffle
+### Instalação do Truffle
 
 Após instalar o NodeJS, abra um terminal e digite o comando abaixo para instalar o utilitário do Truffle:
 > npm install -g truffle
 
 
-#### Subir um nó Ethereum
+### Subir um nó Ethereum
 
 A imagem [caciocosta/gran-ethereum](https://hub.docker.com/r/caciocosta/gran-ethereum) já vem pré-configurada com o [Geth Client](https://geth.ethereum.org).
 
@@ -31,10 +31,11 @@ O comando acima adentra o contêiner. Para executar o Geth faça:
 > geth --datadir /root/gran-ethereum --nodiscover --maxpeers 0 --networkid 11223 --http --http.addr 0.0.0.0 --http.api 'web3,eth,net,debug,personal' --http.corsdomain '*' --allow-insecure-unlock --mine --miner.threads 1
 
 *O nó construirá a DAG para realizar a mineração e este processo pode demorar um pouco.*
+
 **Deixe o terminal aberto! A aplicação se conectará a esse cliente.**
 
 
-#### Implantar o contrato de eleição
+### Implantar o contrato de eleição
 
 Abra outro terminal e acesse o diretório **blockchain** localizado no projeto. Os comandos abaixo desbloqueiam a conta de implantação dos contratos e implanta o contrato de eleição no Ethereum.
 > truffle console
@@ -44,7 +45,7 @@ Abra outro terminal e acesse o diretório **blockchain** localizado no projeto. 
 
 *O código "compilado" do contrato, necessário para utilizar a biblioteca web3.js está localizado em **blockchain/build/contracts/Eleicao.json**.*
 
-#### Executar a aplicação
+### Executar a aplicação
 
 Num terminal, acesse o diretório **web** do projeto. É necessário instalar as dependências da aplicação antes de executá-la. Execute:
 > npm install
